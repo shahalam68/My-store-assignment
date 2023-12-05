@@ -95,6 +95,7 @@ const showProductDetailsInModal = (product_details) => {
       </div>
    `
    modalContainer.appendChild(modalDiv);
+   modalContainer = '';
    
    // console.log(product_details.title);
    // setInnerText('exampleModalLabel', product_details.title);
@@ -130,7 +131,7 @@ const updateTaxAndCharge = () => {
    const priceConverted = getInputValue('price');
    if (priceConverted > 200) {
       setInnerText('delivery-charge', 30);
-      setInnerText('total-tax', priceConverted * 0.2);
+      setInnerText('total-tax', priceConverted*0.2);
    }
    if (priceConverted > 400) {
       setInnerText('delivery-charge', 50);
